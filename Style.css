@@ -1,0 +1,227 @@
+/* Estilo para el cuerpo de la página */
+body {
+    min-height: 30vh;
+    background: url('1.png') no-repeat center center fixed; /* Establecer la imagen de fondo */
+    background-size: cover;
+    margin: 0; /* Eliminar los márgenes predeterminados */
+    padding: 0; /* Eliminar los rellenos predeterminados */
+}
+
+/* Estilo para el contenedor principal */
+.grid-container {
+    position: absolute;
+    top: 200px;
+    right: 510px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 columnas */
+    grid-template-rows: repeat(10, 1fr); /* 10 filas */
+    gap: 5px; /* Espacio entre las casillas */
+    padding: 10px;
+    width: 500px; /* Ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo semi-transparente del contenedor */
+}
+
+/* Estilo para las casillas */
+.grid-item {
+    /* Comentar o eliminar la línea de la imagen de fondo */
+    /* background-image: url('Gris.jpg'); */ /* Imagen de fondo para las casillas */
+    background-size: cover; /* Ajustar la imagen de fondo para cubrir todo el elemento */
+    background-position: center; /* Centrar la imagen de fondo en el elemento */
+    border: 1px solid #ccc; /* Borde de las casillas */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Cambiar el cursor a una mano al pasar por encima */
+    color: black; /* Establecer el color del texto en negro */
+    text-decoration: none; /* Eliminar la decoración de subrayado */
+}
+
+
+/* Estilo para las casillas seleccionadas */
+.grid-item.selected {
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo semi-transparente oscuro cuando se selecciona */
+    color: #fff; /* Color del texto blanco cuando se selecciona */
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+    position: absolute;
+    top: 0px;
+    right: 1390px;
+    margin-right: 20px; /* Espacio entre el logo y el título */
+}
+
+/* Estilo para el logo */
+.logo {
+    width: 115px; /* Tamaño del logo */
+    height: 115px; /* Tamaño del logo */
+}
+
+/* Estilo para el título */
+h1 {
+    color: white; /* Color del texto blanco */
+    margin: 0; /* Eliminar los márgenes predeterminados */
+    text-align: center; /* Centrar horizontalmente */
+    font-family: 'Garamond', serif; /* Establecer la fuente como Garamond */
+    font-size: 24px; /* Tamaño del texto */
+}
+
+
+/* Estilo para la posición de las imágenes */
+.top-left,
+.top-center,
+.top-right,
+.bottom-right {
+    position: absolute;
+    max-width: 50%; /* Tamaño máximo del ancho */
+    max-height: 50%; /* Tamaño máximo del alto */
+}
+
+.top-left {
+    top: 480px;
+    left: 0px;
+    max-width: 30%; /* Tamaño máximo del ancho */
+    max-height: 30%; /* Tamaño máximo del alto */
+}
+
+.top-center {
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 40%; /* Tamaño máximo del ancho */
+    max-height: 40%; /* Tamaño máximo del alto */
+}
+
+.top-right {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    max-width: 30%;
+    max-height: 30%;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    max-width: 30%; /* Tamaño máximo del ancho */
+    max-height: 30%; /* Tamaño máximo del alto */
+}
+
+
+/* Media query para pantallas pequeñas (como celulares) */
+@media only screen and (max-width: 767px) {
+    /* Estilo para el contenedor principal en dispositivos móviles */
+    .grid-container {
+        width: 100%;
+        grid-template-rows: repeat(100, 1fr); /* 100 filas */
+        padding: 0px; /* Ajustar el espacio entre las casillas */
+    }
+
+    /* Estilo para el contenedor del logo */
+    .logo-container {
+        margin-right: 20px; /* Espacio entre el logo y el título */
+    }
+
+    /* Estilo para el logo */
+    .logo {
+        width: 100px; /* Tamaño del logo */
+        height: 100px; /* Tamaño del logo */
+    }
+
+    /* Estilo para la posición de las imágenes en dispositivos móviles */
+    .top-left,
+    .top-center,
+    .top-right,
+    .bottom-right {
+        position: absolute;
+        max-width: 50%; /* Tamaño máximo del ancho */
+        max-height: 50%; /* Tamaño máximo del alto */
+    }
+
+    .top-left {
+        top: 600px;
+        left: -10px;
+        max-width: 50%; /* Tamaño máximo del ancho */
+        max-height: 50%; /* Tamaño máximo del alto */
+    }
+
+    .top-center {
+        top: -30px;
+        left: 65%;
+        transform: translateX(-50%);
+        max-width: 80%; /* Tamaño máximo del ancho */
+        max-height: 80%; /* Tamaño máximo del alto */
+    }
+
+    .top-right {
+        position: absolute;
+        top: 600px;
+        right: 15px;
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .bottom-right {
+        bottom: -60px;
+        right: -70px;
+        max-width: 30%; /* Tamaño máximo del ancho */
+        max-height: 30%; /* Tamaño máximo del alto */
+    }
+}
+
+/* Estilos para el área de desbloqueo */
+.unlock-container {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Color de fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#unlock-input {
+    margin-bottom: 10px;
+}
+
+#unlock-button {
+    margin-bottom: 10px;
+}
+
+#unlock-error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+
+
+.button-container {
+    position: absolute; /* Establece la posición absoluta para que pueda moverse libremente */
+    top: 100px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+    transition: all 0.3s ease; /* Agrega una transición suave para el movimiento */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffb300; /* Color de fondo */
+    color: white; /* Color del texto */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fb9541; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+.button:active {
+    background-color: #ff9500; /* Cambia el color de fondo cuando se hace clic */
+}
